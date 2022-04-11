@@ -1,0 +1,16 @@
+.searchbar {
+    width: 500px;
+    background-color: #EFEFEF;
+    padding: 10px;
+    border: none;
+    cursor: text;
+
+    &__icon {
+        color: 'grey'
+    }
+
+    &__input {
+        background-color: transparent;
+        border: none;
+    }
+}

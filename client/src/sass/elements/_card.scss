@@ -1,0 +1,63 @@
+
+/* ===================================
+   Stitched Card
+==================================== */
+
+.stitched-card {
+    position: relative;
+    background-color: #fff;
+    padding: 7rem 6rem;
+    margin-top: 2rem;
+    max-height: 60rem;
+    overflow-y: scroll;
+}
+
+
+// Desktop
+@media only screen and (min-width : $desktop) { 
+    .stitched-card {
+        border: 2px dashed $secondary;
+        padding: 7rem 6rem;
+        border-radius: 7px;
+    }
+}
+
+
+/* ===================================
+   Auth Card
+==================================== */
+.auth-card {
+    position: relative;
+    background-color: #fff;
+    padding: 7rem 6rem;
+    margin-top: 3rem;
+
+    .form-heading {
+        margin-bottom: 4rem;
+    }
+
+    .auth-icon {
+        position: relative;
+        height: 10rem;
+        margin-bottom: 2rem;
+        left: 2%;
+    }
+}
+
+// Desktop
+@media only screen and (min-width : $desktop) { 
+    .auth-card {
+        border: 2px dashed $secondary;
+        padding: 6rem 7rem;
+        padding-bottom: 9rem;
+        border-radius: 2rem;
+        margin-top: 2rem;
+
+        .auth-icon {
+            height: 7rem;
+        }
+    }
+}
+
+
+
