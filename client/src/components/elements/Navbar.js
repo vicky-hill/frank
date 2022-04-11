@@ -27,7 +27,7 @@ function Navbar({ authenticated, username, logout }) {
 
     // Logged in navbar
     const loggedInNav = (
-        <div className="nav">
+        <div className="nav nav--login">
 
             { logo }
 
@@ -41,7 +41,7 @@ function Navbar({ authenticated, username, logout }) {
 
     // Logged out navbar
     const loggedOutNav = (
-        <div className="nav">
+        <div className="nav nav--logout">
             { logo }
             
             {

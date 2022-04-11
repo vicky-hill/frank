@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import ScrollContainer from '../components/containers/ScrollContainer';
 import AuthContainer from '../components/containers/AuthContainer';
 import Card from '../components/elements/Card';
-import Form, { Heading, Input, SubmitButton} from '../components/elements/Form';
+import Form, { Heading, Input, SubmitButton } from '../components/elements/Form';
 import { connect } from 'react-redux';
 import { login, getUser } from '../actions/auth';
 import { setError } from 'actions/alerts';
 import Alert from 'components/elements/Alert';
 import logo from '../assets/logo.png';
 
-function Login({ 
-    history, 
-    isAuthenticated, 
+function Login({
+    history,
+    isAuthenticated,
     user,
     error,
     login,
@@ -49,7 +49,7 @@ function Login({
     const onSubmit = async e => {
         e.preventDefault();
 
-        if(name === '' || password === '') {
+        if (name === '' || password === '') {
             return setError('Please fill out all fields');
         }
 
@@ -57,21 +57,17 @@ function Login({
     }
 
     return (
-        <ScrollContainer>
-            <AuthContainer>
-                <Card type="auth">
-                <img className="auth-icon" src={logo} alt="logo" />
-                <Heading>Sign into your account</Heading>
-                { error && <Alert message={error} type='danger' /> }
-                    <Form onSubmit={onSubmit}>
-                        <Input placeholder="Username" name="name" id="name" value={name} onChange={onChange} />
-                        <Input placeholder="Password" name="password" id="password" value={password} onChange={onChange} type="password" />
-                       
-                        <SubmitButton title="Log In" />
-                    </Form>
-                </Card>
-            </AuthContainer>
-        </ScrollContainer>
+        <div className="auth-card">
+            <img className="auth-icon" src={logo} alt="logo" />
+            <Heading>Sign into your account</Heading>
+            {error && <Alert message={error} type='danger' />}
+            <Form onSubmit={onSubmit}>
+                <Input placeholder="Username" name="name" id="name" value={name} onChange={onChange} />
+                <Input placeholder="Password" name="password" id="password" value={password} onChange={onChange} type="password" />
+
+                <SubmitButton title="Log In" />
+            </Form>
+        </div>
     )
 }
 

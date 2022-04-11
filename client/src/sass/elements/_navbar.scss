@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 2px 10px rgba(40,75,124,.08);
+    box-shadow: 0 2px 10px rgba(40, 75, 124, .08);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,7 +30,7 @@
             font-weight: 400;
             margin: auto;
             transition: all .5s;
-            font-size: 3rem !important;
+            font-size: 3rem;
             vertical-align: middle;
             line-height: 0;
             transform: translateY(10%);
@@ -54,7 +54,8 @@
         justify-content: center;
     }
 
-    .fa-sign-in-alt, .fa-user-plus {
+    .fa-sign-in-alt,
+    .fa-user-plus {
         color: $primary;
         font-size: 2rem;
         margin-left: 1rem;
@@ -62,7 +63,7 @@
 
     .fa-sign-in-alt {
         font-size: 2.2rem;
-    } 
+    }
 }
 
 
@@ -77,8 +78,25 @@
         padding-left: 1rem;
         padding-right: 2rem;
 
+        &__logo {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            img {
+                height: 4rem;
+                margin-right: 4px;
+            }
+        }
+
         .nav {
-            justify-content: center;
+            &--login {
+                justify-content: center;
+            }
+
+            &--logout {
+                justify-content: space-between;
+            }
         }
     }
 }

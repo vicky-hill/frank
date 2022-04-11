@@ -27,10 +27,17 @@
    Auth Card
 ==================================== */
 .auth-card {
+    border: 2px dashed $secondary;
     position: relative;
     background-color: #fff;
-    padding: 7rem 6rem;
-    margin-top: 3rem;
+    width: 36rem;
+    margin: 0 auto;
+    text-align: center;
+    top: 10vh;
+    padding: 6rem 5rem;
+    padding-bottom: 9rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
 
     .form-heading {
         margin-bottom: 4rem;
@@ -38,23 +45,21 @@
 
     .auth-icon {
         position: relative;
-        height: 10rem;
+        height: 7rem;
         margin-bottom: 2rem;
         left: 2%;
     }
 }
 
-// Desktop
-@media only screen and (min-width : $desktop) { 
+
+@media only screen and (max-width : $mobile) { 
     .auth-card {
-        border: 2px dashed $secondary;
-        padding: 6rem 7rem;
-        padding-bottom: 9rem;
-        border-radius: 2rem;
-        margin-top: 2rem;
+        border: none;
+        padding: 7rem 4rem;
+
 
         .auth-icon {
-            height: 7rem;
+            height: 10rem;
         }
     }
 }
