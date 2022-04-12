@@ -44,7 +44,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+
+    &--login {
+        width: 100%;
+    }
+
+    &--logout {
+        width: 88%;
+    }
 
     &__link {
         color: $grey-black;
@@ -96,6 +103,7 @@
 
             &--logout {
                 justify-content: space-between;
+                width: 100%;
             }
         }
     }
