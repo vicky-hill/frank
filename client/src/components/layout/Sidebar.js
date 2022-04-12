@@ -29,9 +29,12 @@ const Sidebar = ({ }) => {
                 {active === 2 ? <Pricetag height="17px" /> : <PricetagOutline height="17px" />}
                 <p>Tags</p>
             </li>
-            <li className={getClasses(3)} onClick={() => onClick(3)}>
-                <Add height="17px" />
-                <p>Add</p>
+            <li className="sidebar__link">
+                <div className='sidebar__btn btn-round'>
+                    <Add height="20px" />
+                    <p>Add</p>
+                </div>
+
             </li>
         </ul>
     )
