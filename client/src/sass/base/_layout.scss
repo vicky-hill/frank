@@ -1,65 +1,106 @@
+
+/* ===================================
+   Container
+==================================== */
 .container {
-    height: 88vh;
-    position: relative;
-    width: 100vw;
-    overflow: hidden;
-    transition: all 0.2s;
-
-    &.auth-container {
-        margin: 0 auto;
-        text-align: center;
-    }
+    margin-left: 25rem;
+    padding-left: 3rem;
+    padding-right: 6rem;
+    width: auto;
 }
 
-.scroll-container {
-    height: 100%; 
-    width: 100vw;
-    overflow: scroll;
-    overflow-x: hidden;
-    background-color: $grey-white;
+// 100% fit in padded container
+.make-fit {
+    transform: translateX(-6rem) !important;
+    width: calc(100% + 12rem) !important;
 }
 
-.list-container {
-    background-color: rgba($color: $grey-header, $alpha: .42);
-    height: auto;
-    width: 100vw;
-    padding: 1rem 0;
-    overflow: scroll;
-    overflow-x: hidden;
-    border-top: 3px solid rgba($color: $grey-header, $alpha: .42);
-    margin-bottom: 5rem;
-}
+/* ===================================
+   Sidebar
+==================================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22rem;
+    height: 100%;
+    background: #ffffff;
+    padding-top: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: scroll;
 
-.main-container {
-    margin: 0;
-}
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 50px;
+        color: $dark;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
 
-
-// Desktop
-@media only screen and (min-width : $desktop) {
-
-    .container {
-        &.auth-container {
-            width: 38rem;
-            padding-top: 9vh;
-        }
-    }
-
-    .main-container {
-        margin: 6rem 26vw;
-    }
-
-    .list-container {
-        height: auto;
-        background-color: transparent;
-        border: none;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: calc(100% + 2rem);
-        transform: translateX(-1rem);
-
-        &.flex {
+        span {
             display: flex;
+
+            svg {
+                fill: inherit;
+            }
         }
+
+        p {
+            margin-left: 10px;
+        }
+
+        &--active {
+            font-weight: 600;
+        }
+
+        &:not(.sidebar__link--active):hover, &:not(.sidebar__link--active):hover span svg {
+            fill: $secondary;
+            color: $secondary;
+        }
+
+        
+    }
+}
+
+
+@media only screen and (max-width : $breakpoint-lg) { 
+    
+    // Stretch everything in main
+    .main section .row .col-1,
+    .main section .row .col-2,
+    .main section .row .col-3,
+    .main section .row .col-4,
+    .main section .row .col-5,
+    .main section .row .col-6,
+    .main section .row .col-7,
+    .main section .row .col-8,
+    .main section .row .col-9,
+    .main section .row .col-10,
+    .main section .row .col-11,
+    .main section .row .col-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : $breakpoint-md) { 
+    .main {
+        margin: 0rem auto;
+        padding: 35px;
+    }
+
+
+    .sidebar {
+        display: none;
+    }
+}
+
+ @media only screen and (max-width: $breakpoint-sm) { 
+    .main {
+        padding: 25px;
     }
 }

@@ -1,13 +1,11 @@
 import React from 'react';
-
-/* Props
-=========================================== */
-// children
+import Sidebar from './Sidebar';
 
 
 function Container({ children }) {
     return (
-        <div className={`container`}>
+        <div className='container'>
+            <Sidebar />
             { children }
         </div>
     )

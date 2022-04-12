@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Container from 'components/containers/Container';
+import Container from 'components/layout/Container';
+
+
 
 
 const Home = ({}) => {
     
     return (
         <Container>
-            Home
+
         </Container>
 
     )
