@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import ScrollContainer from '../components/containers/ScrollContainer';
-import AuthContainer from '../components/containers/AuthContainer';
-import Card from '../components/elements/Card';
 import Alert from 'components/elements/Alert';
 import Form, { Heading, Input, SubmitButton } from '../components/elements/Form';
 

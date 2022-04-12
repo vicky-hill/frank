@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ScrollContainer from '../components/containers/ScrollContainer';
-import AuthContainer from '../components/containers/AuthContainer';
-import Card from '../components/elements/Card';
 import Form, { Heading, Input, SubmitButton } from '../components/elements/Form';
 import { connect } from 'react-redux';
 import { login, getUser } from '../actions/auth';
