@@ -2,10 +2,15 @@
    Container
 ==================================== */
 .container {
-    margin-left: 25rem;
-    padding-left: 3rem;
-    padding-right: 6rem;
-    width: auto;
+    margin-left: 12rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 14rem - 6.5rem;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 85rem;
 }
 
 // 100% fit in padded container
@@ -13,6 +18,7 @@
     transform: translateX(-6rem) !important;
     width: calc(100% + 12rem) !important;
 }
+
 
 /* ===================================
    Sidebar
@@ -41,14 +47,6 @@
         margin-bottom: 1.5rem;
         font-weight: 400;
 
-        span {
-            display: flex;
-
-            svg {
-                fill: inherit;
-            }
-        }
-
         p {
             margin-left: 10px;
         }
@@ -57,9 +55,8 @@
             font-weight: 600;
         }
 
-
         &:hover,
-        &:hover>span svg {
+        &:hover > span svg {
             fill: $secondary;
             color: $secondary;
         }

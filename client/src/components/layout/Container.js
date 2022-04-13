@@ -6,7 +6,9 @@ function Container({ children }) {
     return (
         <div className='container'>
             <Sidebar />
-            { children }
+            <div className="content">
+                {children}
+            </div>
         </div>
     )
 }
